@@ -1,9 +1,10 @@
 import Header from "./components/Header";
 import TopBlock from "./components/TopBlock";
 import { TopBlockDataType } from './types/TopBlockData';
-import { data } from "./data/data";
+import { data } from "./data/lineData";
 import { MyResponsiveLine } from "./components/Graph";
 import SalesByCategory from "./components/SalesByCategory";
+import Upgrade from "./components/Upgrade";
 
 function App() {
 
@@ -55,8 +56,10 @@ function App() {
             <MyResponsiveLine data={data} />
           </div>
 
-          <div className="flex flex-col flex-1">
+          <div className="flex flex-col flex-1 gap-6">
             <SalesByCategory />
+
+            <Upgrade />
           </div>
 
         </div>

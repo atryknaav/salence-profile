@@ -1,8 +1,12 @@
-import React from 'react'
+import { MyResponsivePie } from "./PieChart"
+import { pieData } from '../data/pieData';
 
 const SalesByCategory = () => {
   return (
-    <div>SalesByCategory</div>
+    <div className='bg-back-dark rounded-lg h-[70%] p-10  dark:text-white'>
+        Sales by category
+        <MyResponsivePie data={pieData} />
+    </div>
   )
 }
 

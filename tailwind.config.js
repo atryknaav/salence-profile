@@ -15,7 +15,8 @@ export default {
         'minor-light': '#6b7280',
         'light-gray': '#27272a',
         'success': '#bef264',
-        'minor-success': '#27272a'
+        'minor-success': '#27272a',
+        'upgrade': '#115e59'
       }
     },
   },
