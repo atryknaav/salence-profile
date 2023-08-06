@@ -1,31 +1,47 @@
-import React from 'react'
+import { arrowUp, shopBag, users, star, arrowBack } from "../svg/icons";
 
-const TopBlock = (props: { name: string, status: string, weekPercent: string, weekNum: string  }) => {
-    const arrow =
-         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
-        </svg>
-  
+const TopBlock = (props: { name: string, status: string, weekPercent: string, weekNum: string  }) => {        
     const { name, status, weekPercent, weekNum } = props;
+
+    const iconList: {[key: string]: JSX.Element} = {
+        'Total sales': shopBag,
+        'Visitors': users,
+        'Total orders': star,
+        'Refunded': arrowBack
+    };
+
+    const icon = iconList[name];
+
+    const styleBody = name === 'Total sales'
+        ? ' bg-success '
+        : ' bg-transparent dark:bg-back-dark dark:text-white'
+
   return (
-    <div className='flex flex-col bg-transparent dark:bg-back-dark h-16 dark:text-white flex-1 first:rounded-l-lg last:rounded-r-lg p-3 border-r-[1px] border-[#393939] last:border-none'>
+    
+    <div className={'flex flex-col flex-1 first:rounded-l-lg last:rounded-r-lg p-3 mt-20 lg:mt-0 border-r-[1px] border-[#393939] last:border-none' + styleBody}>
 
-        <div>
-            {name}
-        </div>
-
-        <div>
-            {`${arrow} $${status}`}
-        </div>
-
-        <div className='flex flex-col gap-3'>
-
-            <div>
-                {`${weekPercent}%`}
+        <div className="flex gap-2">
+            <div className={`rounded-full p-1 h-[fit-content] bg-black ${name === 'Total sales' ? 'bg-black text-success' : 'dark:bg-light-gray bg-black'}`}>
+                {icon}
             </div>
 
-            <div>
+            <div className='text-md mb-6'>
                 {name}
+            </div>
+        </div>
+
+        <div className='mb-3 font-semibold text-3xl'>
+            {`${status}`}
+        </div>
+
+        <div className='flex gap-3 text-sm font-medium mb-1'>
+
+            <div className={`flex items-center gap-2 ${name === 'Total sales' ? 'text-minor-success' : 'text-success'}`}>
+                {arrowUp} {`${weekPercent}%`}
+            </div>
+
+            <div className={`text-minor-dark ${name === 'Total sales' ? 'text-minor-success' : 'text-minor-dark'}`}>
+                {`+${weekNum} this week`}
             </div>
 
         </div>

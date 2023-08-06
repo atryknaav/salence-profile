@@ -1,91 +1,68 @@
 import Header from "./components/Header";
 import TopBlock from "./components/TopBlock";
+import { TopBlockDataType } from './types/TopBlockData';
+import { data } from "./data/data";
+import { MyResponsiveLine } from "./components/Graph";
+import SalesByCategory from "./components/SalesByCategory";
 
 function App() {
 
+  const topBlockData: TopBlockDataType[] = [
+    {
+      name: "Total sales",
+      status: "$825,491.73", 
+      weekPercent: "20.9", 
+      weekNum: "18.4K"
+    },
+    {
+      name: "Visitors",
+      status: "780,192", 
+      weekPercent: "13", 
+      weekNum: "3.5K"
+    },
+    {
+      name: "Total orders",
+      status: "2,625.991", 
+      weekPercent: "4.2", 
+      weekNum: "5K"
+    },
+    {
+      name: "Refunded",
+      status: "780,192", 
+      weekPercent: "9.1", 
+      weekNum: "66"
+    }
+  ]
+
   return (
-    <>
-      <Header />
-
-      <div className="flex rounded-lg h-[fit-content]">
-        <TopBlock name="Total sales" status="" weekPercent="" weekNum=""/>
-        <TopBlock name="Visitors" status="" weekPercent="" weekNum=""/>
-        <TopBlock name="Total orders" status="" weekPercent="" weekNum=""/>
-        <TopBlock name="Refunded" status="" weekPercent="" weekNum=""/>
-      </div>
-
+    <div className="flex w-full h-[100%]">
       
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
+      {/* SIDEBAR */}
+      <div className="lg:w-[20vw] border-r-4 border-stone-900 lg:flex hidden"></div>
 
-    </>
+      <div className="flex-1 h-full ml-12 flex flex-col gap-6">
+        <Header />
+
+        <div className="flex flex-col lg:flex-row rounded-lg ">
+          {topBlockData.map((data, index) => (
+            <TopBlock key={index} name={data.name} status={data.status} weekPercent={data.weekPercent} weekNum={data.weekNum} />
+          ))}
+        </div>
+        
+        <div className="flex flex-row flex-1 gap-6">
+
+          <div className="flex flex-col bg-back-dark rounded-lg w-[70%] h-[70%]">
+            <MyResponsiveLine data={data} />
+          </div>
+
+          <div className="flex flex-col flex-1">
+            <SalesByCategory />
+          </div>
+
+        </div>
+
+      </div>
+    </div>
   )
 }
 

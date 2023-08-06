@@ -13,6 +13,9 @@ export default {
         'back-dark': '#1a1919',
         'minor-dark': '#91918e',
         'minor-light': '#6b7280',
+        'light-gray': '#27272a',
+        'success': '#bef264',
+        'minor-success': '#27272a'
       }
     },
   },
