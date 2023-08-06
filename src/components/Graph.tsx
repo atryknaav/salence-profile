@@ -37,7 +37,7 @@ export const MyResponsiveLine = ({ data }: { data: DataType[] }) => {
                     1000,
                     1500,
                     2000,
-                    2500
+                    2500,
                 ],
                 tickSize: 5,
                 tickPadding: 5,
@@ -54,7 +54,7 @@ export const MyResponsiveLine = ({ data }: { data: DataType[] }) => {
                     60,
                     80,
                     100,
-                    120
+                    120,
                 ],
                 tickSize: 5,
                 tickPadding: 5,

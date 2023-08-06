@@ -5,6 +5,9 @@ import { data } from "./data/lineData";
 import { MyResponsiveLine } from "./components/Graph";
 import SalesByCategory from "./components/SalesByCategory";
 import Upgrade from "./components/Upgrade";
+import TopProducts from "./components/TopProducts";
+import Sidebar from "./components/Sidebar/Sidebar";
+
 
 function App() {
 
@@ -39,7 +42,7 @@ function App() {
     <div className="flex w-full h-[100%]">
       
       {/* SIDEBAR */}
-      <div className="lg:w-[20vw] border-r-4 border-stone-900 lg:flex hidden"></div>
+      <Sidebar />
 
       <div className="flex-1 h-full ml-12 flex flex-col gap-6">
         <Header />
@@ -50,13 +53,20 @@ function App() {
           ))}
         </div>
         
-        <div className="flex flex-row flex-1 gap-6">
+        <div className="flex flex-row flex-1 gap-6 ">
 
-          <div className="flex flex-col bg-back-dark rounded-lg w-[70%] h-[70%]">
-            <MyResponsiveLine data={data} />
+          <div className="flex flex-col w-full gap-6">
+
+            <div className="flex flex-col bg-back-dark rounded-lg w-full h-[70%]">
+              <MyResponsiveLine data={data} />
+            </div>
+
+            <div className="flex-1">
+              <TopProducts />
+            </div>
           </div>
 
-          <div className="flex flex-col flex-1 gap-6">
+          <div className="flex flex-col w-[35%] gap-6">
             <SalesByCategory />
 
             <Upgrade />
