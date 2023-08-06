@@ -14,7 +14,7 @@ const TopBlock = (props: { name: string, status: string, weekPercent: string, we
 
     const styleBody = name === 'Total sales'
         ? ' bg-success '
-        : ' bg-transparent dark:bg-back-dark dark:text-white duration-1000 hover:bg-success hover:scale-105 hover:cursor-pointer'
+        : ' bg-transparent dark:bg-back-dark dark:text-white transition-colors hover:bg-success hover:scale-100 hover:cursor-pointer'
 
   return (
     

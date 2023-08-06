@@ -1,4 +1,5 @@
-import Select from "./Select"
+import Select from "./Select";
+import { search } from "../../svg/icons";
 
 const TopProducts = () => {
   return (
@@ -11,8 +12,9 @@ const TopProducts = () => {
 
             <div className="flex justify-end gap-6 flex-1">
 
-                <div>
-                    <input type="text" className="bg-transparent rounded-md border-minor-dark border-[1px] w-[25vw] py-1 px-3" placeholder='Search'/>
+                <div className="relative">
+                    <div className='w-5 h-5 absolute top-1/2 -translate-y-3 left-2 text-minor-dark'>{search}</div>
+                    <input type="text" className="bg-transparent rounded-md border-minor-dark border-[1px] w-[25vw] py-1 pl-8" placeholder='Search'/>
                 </div>
 
                 <div>
