@@ -1,6 +1,6 @@
 import { Fragment, useState } from 'react'
 import { Listbox, Transition } from '@headlessui/react'
-import { CheckIcon, ChevronUpDownIcon } from '@heroicons/react/20/solid';
+import { ChevronUpDownIcon } from '@heroicons/react/20/solid';
 
 const people = [
   { name: 'This week' },
@@ -36,7 +36,7 @@ export default function Select() {
                   key={personIdx}
                   className={({ active }) =>
                     `relative cursor-default select-none py-2 pl-3 pr-4 ${
-                      active ? 'bg-minor-light text-amber-900' : 'dark:text-white'
+                      active ? 'bg-minor-light text-stone-900' : 'dark:text-white'
                     }`
                   }
                   value={person}
@@ -51,8 +51,7 @@ export default function Select() {
                         {person.name}
                       </span>
                       {selected ? (
-                        <span className="absolute inset-y-0 left-0 flex items-center pl-3 text-amber-600">
-                          <CheckIcon className="h-5 w-5" aria-hidden="true" />
+                        <span className="absolute inset-y-0 left-0 flex items-center pl-3 text-gstone-800">
                         </span>
                       ) : null}
                     </>
