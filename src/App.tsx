@@ -5,7 +5,7 @@ import { data } from "./data/lineData";
 import { MyResponsiveLine } from "./components/Graph";
 import SalesByCategory from "./components/SalesByCategory";
 import Upgrade from "./components/Upgrade";
-import TopProducts from "./components/TopProducts";
+import TopProducts from "./components/TopProducts/TopProducts";
 import Sidebar from "./components/Sidebar/Sidebar";
 
 
