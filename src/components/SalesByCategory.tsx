@@ -1,11 +1,17 @@
-import { MyResponsivePie } from "./PieChart"
-import { pieData } from '../data/pieData';
+import  PieChartExp  from "./PieChart"
+
 
 const SalesByCategory = () => {
   return (
     <div className='bg-back-dark rounded-lg h-[70%] p-6 text-lg font-semibold  dark:text-white '>
         Sales by category
-        <MyResponsivePie data={pieData} />
+        <div className="z-[1] flex flex-row">
+        <PieChartExp/>
+        
+          <div className="align-bottom">
+            More
+          </div>
+        </div>
     </div>
   )
 }

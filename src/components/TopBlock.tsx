@@ -1,6 +1,6 @@
 import { useAtom } from "jotai";
 import { arrowUp, shopBag, users, star, arrowBack } from "../svg/icons";
-import { blockAtom } from "../blockContext";
+import { blockAtom } from "../contexts/blockContext";
 import { BlockName } from "../types/BlockName";
 
 const TopBlock = (props: { name: BlockName, status: string, weekPercent: string, weekNum: string  }) => {        

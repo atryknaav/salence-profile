@@ -1,39 +1,33 @@
 
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
+import { siteData } from '../data/data';
+import { useAtom } from 'jotai';
+import { blockAtom } from '../contexts/blockContext';
 
 const Graph = () => {
+  const [block] = useAtom(blockAtom);
+  const data = siteData.find((e) => e.blockName === block)!.lineData;
+  console.log(data,);
   return (
-    <div className='mt-[10px]'>
+    <div className='mt-[20px]'>
     <LineChart className='w-full'
       width={1000}
-      height={350}
-      data={[
-        {
-          name: 'Page A',
-          uv: 4000,
-          pv: 2400,
-          amt: 2400,
-        },
-        {
-          name: 'Page B',
-          uv: 3000,
-          pv: 1398,
-          amt: 2210,
-        }]}
+      height={400}
+      data={data}
       margin={{
-        top: 5,
+        top: 50,
         right: 30,
         left: 20,
-        bottom: 5,
+        bottom: 0,
       }}
     >
-      <CartesianGrid strokeDasharray="3 3" />
-      <XAxis dataKey="name" />
+      <CartesianGrid strokeDasharray="1" vertical={false} />
+      <XAxis dataKey="name" interval={0}/>
       <YAxis />
       <Tooltip />
-      <Legend />
-      <Line type="monotone" dataKey="pv" stroke="#8884d8" activeDot={{ r: 8 }} />
-      <Line type="monotone" dataKey="uv" stroke="#82ca9d" />
+      <Legend verticalAlign='top' align='right' margin={{top: 0, left: 0, right: 5, bottom: 10}} height={35}/>
+      <Line type="monotone" dataKey="pv" stroke="#eb750e" activeDot={{ r: 8 }} dot={false} strokeWidth={3} name='Revenue'/>
+      <Line type="monotone" dataKey="uv" stroke="#bef264" dot={false} name='Orders' strokeWidth={3}/>
     </LineChart>
     </div>
   )
