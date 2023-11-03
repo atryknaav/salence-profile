@@ -1,5 +1,7 @@
+import { BlockName } from "./BlockName"
+
 export type TopBlockDataType = {
-    name: string,
+    name: BlockName,
     status: string,
     weekPercent: string,
     weekNum: string

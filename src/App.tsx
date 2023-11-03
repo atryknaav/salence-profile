@@ -1,12 +1,11 @@
 import Header from "./components/Header";
 import TopBlock from "./components/TopBlock";
 import { TopBlockDataType } from './types/TopBlockData';
-import { data } from "./data/lineData";
-import { MyResponsiveLine } from "./components/Graph";
 import SalesByCategory from "./components/SalesByCategory";
 import Upgrade from "./components/Upgrade";
 import TopProducts from "./components/TopProducts/TopProducts";
 import Sidebar from "./components/Sidebar/Sidebar";
+import Graph from "./components/Graph";
 
 
 function App() {
@@ -58,7 +57,7 @@ function App() {
           <div className="flex flex-col w-full gap-6">
 
             <div className="flex flex-col bg-back-dark rounded-lg w-full h-[70%]">
-              <MyResponsiveLine data={data} />
+              <Graph />
             </div>
 
             <div className="flex-1">

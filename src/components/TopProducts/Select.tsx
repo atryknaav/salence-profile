@@ -12,10 +12,10 @@ export default function Select() {
   const [selected, setSelected] = useState(people[0])
 
   return (
-    <div className="flex-1">
+    <div className="flex-1 ">
       <Listbox value={selected} onChange={setSelected}>
         <div className="relative">
-          <Listbox.Button className="relative w-full cursor-default rounded-lg dark:bg-transparent border-[1px] border-minor-dark py-[0.4rem] pl-3 pr-10 text-left shadow-md focus:outline-none focus-visible:border-indigo-500 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 dark:text-white focus-visible:ring-offset-2 focus-visible:ring-offset-orange-300 sm:text-sm">
+          <Listbox.Button className="hover:cursor-pointer relative w-full cursor-default rounded-lg dark:bg-transparent border-[1px] border-minor-dark py-[0.4rem] pl-3 pr-10 text-left shadow-md focus:outline-none focus-visible:border-indigo-500 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 dark:text-white focus-visible:ring-offset-2 focus-visible:ring-offset-orange-300 sm:text-sm">
             <span className="block truncate">{selected.name}</span>
             <span className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2">
               <ChevronUpDownIcon

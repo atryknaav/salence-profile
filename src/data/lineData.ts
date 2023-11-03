@@ -1471,7 +1471,7 @@ export const data = [
     },
     {
       "id": "us",
-      "color": "hsl(268, 70%, 50%)",
+      "color": "hsl(98, 77%, 45%)",
       "data": [
         {
           "x": 0,

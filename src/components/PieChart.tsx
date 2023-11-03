@@ -12,10 +12,10 @@ import { ResponsivePie } from '@nivo/pie';
 export const MyResponsivePie = ({ data }: { data: DataType[] }) => (
     <ResponsivePie
         data={data}
-        margin={{ top: 40, right: 80, bottom: 80, left: 80 }}
+        margin={{ top: 40, right: 95, bottom: 80, left: 95 }}
         innerRadius={0.5}
         padAngle={0.7}
-        cornerRadius={3}
+        cornerRadius={5}
         activeOuterRadiusOffset={8}
         borderWidth={1}
         borderColor={{
@@ -28,7 +28,7 @@ export const MyResponsivePie = ({ data }: { data: DataType[] }) => (
             ]
         }}
         arcLinkLabelsSkipAngle={10}
-        arcLinkLabelsTextColor="#333333"
+        arcLinkLabelsTextColor="#91918e"
         arcLinkLabelsThickness={2}
         arcLinkLabelsColor={{ from: 'color' }}
         arcLabelsSkipAngle={10}
@@ -61,56 +61,7 @@ export const MyResponsivePie = ({ data }: { data: DataType[] }) => (
                 spacing: 10
             }
         ]}
-        fill={[
-            {
-                match: {
-                    id: 'ruby'
-                },
-                id: 'dots'
-            },
-            {
-                match: {
-                    id: 'c'
-                },
-                id: 'dots'
-            },
-            {
-                match: {
-                    id: 'go'
-                },
-                id: 'dots'
-            },
-            {
-                match: {
-                    id: 'python'
-                },
-                id: 'dots'
-            },
-            {
-                match: {
-                    id: 'scala'
-                },
-                id: 'lines'
-            },
-            {
-                match: {
-                    id: 'lisp'
-                },
-                id: 'lines'
-            },
-            {
-                match: {
-                    id: 'elixir'
-                },
-                id: 'lines'
-            },
-            {
-                match: {
-                    id: 'javascript'
-                },
-                id: 'lines'
-            }
-        ]}
+       
         legends={[
             {
                 anchor: 'bottom',
@@ -130,7 +81,7 @@ export const MyResponsivePie = ({ data }: { data: DataType[] }) => (
                     {
                         on: 'hover',
                         style: {
-                            itemTextColor: '#000'
+                            itemTextColor: '#A4A4A4'
                         }
                     }
                 ]
