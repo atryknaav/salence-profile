@@ -7,7 +7,7 @@ import { blockAtom } from '../contexts/blockContext';
 const Graph = () => {
   const [block] = useAtom(blockAtom);
   const data = siteData.find((e) => e.blockName === block)!.lineData;
-  console.log(data,);
+  const legends = siteData.find((e) => e.blockName === block)!.lineLegends;
   return (
     <div className='mt-[20px]'>
     <LineChart className='w-full'
@@ -26,8 +26,11 @@ const Graph = () => {
       <YAxis />
       <Tooltip />
       <Legend verticalAlign='top' align='right' margin={{top: 0, left: 0, right: 5, bottom: 10}} height={35}/>
-      <Line type="monotone" dataKey="pv" stroke="#eb750e" activeDot={{ r: 8 }} dot={false} strokeWidth={3} name='Revenue'/>
-      <Line type="monotone" dataKey="uv" stroke="#bef264" dot={false} name='Orders' strokeWidth={3}/>
+      <Line type="monotone" dataKey="uv" stroke="#eb750e" activeDot={{ r: 8 }} dot={false} strokeWidth={3} name={legends!.l1.name}/>
+      {legends!.l2.active === true 
+        ? <Line type="monotone" dataKey="pv" stroke="#bef264" dot={false} name={legends!.l2.name} strokeWidth={3}/>
+        : undefined}
+      
     </LineChart>
     </div>
   )

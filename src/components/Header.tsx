@@ -1,10 +1,14 @@
 import { AiOutlineUnorderedList, AiOutlineSearch } from 'react-icons/ai';
 import { RiNotification3Line } from 'react-icons/ri';
-import { chevronDown } from '../svg/icons';
+import { chevronDown, moon, sun } from '../svg/icons';
+import { isDarkMode } from '../contexts/themeContext';
+import { useAtom } from 'jotai';
+import { useState } from 'react';
 
 
 
 const Header = () => {
+    const [isDark, setIsDark] = useAtom<boolean>(isDarkMode);
   return (
     <header className='flex flex-row justify-between p-3 lg:bg-transparent bg-black fixed w-full lg:static h-[fit-content]'>
 
@@ -19,6 +23,13 @@ const Header = () => {
 
         <div className='flex-row justify-end lg:flex hidden mr-10 align-middle lg:items-center gap-6'>
 
+            <div onClick={() => setIsDark(!isDark)} className={isDark
+                ? "text-white cursor-pointer"
+                : "text-black cursor-pointer"}>
+                {isDark
+                    ? sun
+                    : moon}
+            </div>
 
             <div className='dark:text-white flex-col justify-center text-2xl'>
                 <AiOutlineSearch />
