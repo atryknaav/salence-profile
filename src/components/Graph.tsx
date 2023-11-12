@@ -1,11 +1,13 @@
 
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
 import { siteData } from '../data/data';
-import { useAtom } from 'jotai';
+import { useAtomValue } from 'jotai';
 import { blockAtom } from '../contexts/blockContext';
+import { isDarkMode } from '../contexts/themeContext';
 
 const Graph = () => {
-  const [block] = useAtom(blockAtom);
+  const isDark = useAtomValue(isDarkMode);
+  const block = useAtomValue(blockAtom);
   const data = siteData.find((e) => e.blockName === block)!.lineData;
   const legends = siteData.find((e) => e.blockName === block)!.lineLegends;
   return (
@@ -28,7 +30,7 @@ const Graph = () => {
       <Legend verticalAlign='top' align='right' margin={{top: 0, left: 0, right: 5, bottom: 10}} height={35}/>
       <Line type="monotone" dataKey="uv" stroke="#eb750e" activeDot={{ r: 8 }} dot={false} strokeWidth={3} name={legends!.l1.name}/>
       {legends!.l2.active === true 
-        ? <Line type="monotone" dataKey="pv" stroke="#bef264" dot={false} name={legends!.l2.name} strokeWidth={3}/>
+        ? <Line type="monotone" dataKey="pv" stroke={isDark ? "#bef264" : "#115e59"} dot={false} name={legends!.l2.name} strokeWidth={3}/>
         : undefined}
       
     </LineChart>

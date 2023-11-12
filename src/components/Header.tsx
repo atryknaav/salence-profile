@@ -2,18 +2,20 @@ import { AiOutlineUnorderedList, AiOutlineSearch } from 'react-icons/ai';
 import { RiNotification3Line } from 'react-icons/ri';
 import { chevronDown, moon, sun } from '../svg/icons';
 import { isDarkMode } from '../contexts/themeContext';
-import { useAtom } from 'jotai';
-import { useState } from 'react';
+import { useAtomValue, useSetAtom } from 'jotai';
 
 
 
 const Header = () => {
-    const [isDark, setIsDark] = useAtom<boolean>(isDarkMode);
+    const isDark = useAtomValue(isDarkMode);
+    const setIsDark = useSetAtom(isDarkMode);
   return (
     <header className='flex flex-row justify-between p-3 lg:bg-transparent bg-black fixed w-full lg:static h-[fit-content]'>
 
         <div className='w-[70%]'>
-           <h1 className='lg:text-3xl font-medium font-sans dark:text-white w-full text-[6vw]'>
+           <h1 className={`lg:text-3xl font-medium font-sans w-full text-[6vw] ${isDark
+                ? 'text-white'
+                : 'text-black'}`}>
                 Welcome back, Arsenii 
             </h1>
             <p className='text-minor-light dark:text-minor-dark text-lg lg:block hidden'>
@@ -31,11 +33,15 @@ const Header = () => {
                     : moon}
             </div>
 
-            <div className='dark:text-white flex-col justify-center text-2xl'>
+            <div className={`flex-col justify-center text-2xl ${isDark
+                ?   'text-white'
+                :   'text-black'}`}>
                 <AiOutlineSearch />
             </div>
 
-            <div className='dark:text-white flex-col justify-center text-2xl'>
+            <div className={`flex-col justify-center text-2xl ${isDark
+                ?   'text-white'
+                :   'text-black'}`}>
                 <RiNotification3Line />
             </div>
             
@@ -43,7 +49,9 @@ const Header = () => {
                 <div className='h-10 w-10 bg-gray-400 rounded-full mx-2'>
 
                 </div>
-                <div className="font-medium text-sm dark:text-white flex gap-2 ">
+                <div className={`select-none font-medium text-sm flex gap-2 hover:cursor-pointer rounded-md p-1 ${isDark 
+                    ?   'text-white hover:bg-active-dark'
+                    :   'text-black hover:bg-slate-100'}`}>
                     Arsenii Bilyi <div className='center'>{chevronDown}</div>
             </div>
             </div>

@@ -6,14 +6,16 @@ import Upgrade from "./components/Upgrade";
 import TopProducts from "./components/TopProducts/TopProducts";
 import Sidebar from "./components/Sidebar/Sidebar";
 import Graph from "./components/Graph";
-import { useAtom } from "jotai";
+import { useAtom, useAtomValue } from "jotai";
 import { isDarkMode } from "./contexts/themeContext";
+import { blockAtom } from "./contexts/blockContext";
 
 
 
 function App() {
   
-  const [isDark] = useAtom(isDarkMode);
+  const isDark = useAtomValue(isDarkMode);
+  const block = useAtomValue(blockAtom);
 
 
   const topBlockData: TopBlockDataType[] = [
@@ -49,7 +51,7 @@ function App() {
       {/* SIDEBAR */}
       <Sidebar />
 
-      <div className="flex-1 h-full ml-12 flex flex-col gap-6">
+      <div className="flex-1 h-full md:ml-12 flex flex-col gap-6">
         <Header />
 
         <div className="flex flex-col lg:flex-row rounded-lg ">
@@ -62,11 +64,16 @@ function App() {
 
           <div className="flex flex-col w-full gap-6">
 
-            <div className="flex flex-col bg-back-dark rounded-lg w-full h-[70%]">
+            <div className={`flex flex-col bg-back-dark rounded-lg w-full h-[70%] ${isDark
+              ? 'bg-back-dark'
+              : 'bg-white'}`}>
+              <div className={`mt-5 mb-[-5%] ml-5 text-lg font-bold ${isDark ? 'text-white' : 'text-black'}`}>
+                {block}
+              </div>
               <Graph />
             </div>
 
-            <div className="flex-1">
+            <div className="flex-1 rounded-lg">
               <TopProducts />
             </div>
           </div>

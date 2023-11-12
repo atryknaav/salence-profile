@@ -4,8 +4,7 @@ import { isDarkMode } from "./contexts/themeContext"
 const Root = ({children}: {children: JSX.Element}) => {
   const [isDark] = useAtom(isDarkMode)
   return (
-    <div className={"px-[20px] py-[10px] h-screen " + isDark
-      ? "bg-black" : "bg-white"}>
+    <div className={`md:px-[20px] py-[10px] h-full duration-500 ${isDark ? "bg-dark" : "bg-white"}`}>
         {children}
     </div>
   )

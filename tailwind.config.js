@@ -18,7 +18,8 @@ export default {
         'minor-success': '#27272a',
         'upgrade': '#115e59',
         'border': '#393939',
-        'active-dark': '#161515'
+        'active-dark': '#161515',
+        'dark': '#121211'
       }
     },
   },
