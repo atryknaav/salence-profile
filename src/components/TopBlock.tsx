@@ -39,7 +39,7 @@ const TopBlock = (props: {
   return (
     <div
       className={
-        "flex flex-col group flex-1 first:rounded-l-lg last:rounded-r-lg p-3 mt-15 lg:mt-0 first:mt-[11vw] lg:first:mt-0" +
+        "flex flex-col group flex-1 first:rounded-l-lg last:rounded-r-lg p-3 mt-15 lg:mt-0 first:mt-[11vw] lg:first:mt-0 select-none" +
         styleBody
       }
       onClick={() => setCurrBlock(name)}
