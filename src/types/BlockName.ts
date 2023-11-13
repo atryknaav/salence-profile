@@ -1,1 +1,5 @@
-export type BlockName = 'Total sales' | 'Visitors' | 'Total orders' | 'Refunded'
+export type BlockName =
+  | "Total sales"
+  | "Visitors"
+  | "Total orders"
+  | "Refunded";
