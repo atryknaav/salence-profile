@@ -10,7 +10,7 @@ const Header = () => {
     const isDark = useAtomValue(isDarkMode);
     const setIsDark = useSetAtom(isDarkMode);
   return (
-    <header className='flex flex-row justify-between p-3 lg:bg-transparent bg-black fixed w-full lg:static h-[fit-content]'>
+    <header className='flex flex-row justify-between p-3 lg:bg-transparent bg-black fixed w-screen lg:w-full lg:static h-[fit-content] mb-20 lg:mb-0 z-0'>
 
         <div className='w-[70%]'>
            <h1 className={`lg:text-3xl font-medium font-sans w-full text-[6vw] ${isDark

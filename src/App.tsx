@@ -51,20 +51,20 @@ function App() {
       {/* SIDEBAR */}
       <Sidebar />
 
-      <div className="flex-1 h-full md:ml-12 flex flex-col gap-6">
+      <div className="flex-1 h-full lg:ml-12 flex flex-col gap-6">
         <Header />
 
-        <div className="flex flex-col lg:flex-row rounded-lg ">
+        <div className="flex flex-col items-center lg:flex-row rounded-lg ">
           {topBlockData.map((data, index) => (
             <TopBlock key={index} name={data.name} status={data.status} weekPercent={data.weekPercent} weekNum={data.weekNum} />
           ))}
         </div>
         
-        <div className="flex flex-row flex-1 gap-6 ">
+        <div className="flex flex-row flex-1 gap-6 w-full">
 
           <div className="flex flex-col w-full gap-6">
 
-            <div className={`flex flex-col bg-back-dark rounded-lg w-full h-[70%] ${isDark
+            <div className={`w-screen flex flex-col bg-back-dark rounded-lg lg:w-full h-[70%] ${isDark
               ? 'bg-back-dark'
               : 'bg-white'}`}>
               <div className={`mt-5 mb-[-5%] ml-5 text-lg font-bold ${isDark ? 'text-white' : 'text-black'}`}>

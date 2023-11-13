@@ -1390,9 +1390,8 @@ export const siteData: dataProps[] = [
           }
         ],
         pieData: [
-            { name: 'Electronics', value: 4782 },
-            { name: 'Laptops', value: 2754 },
-            { name: 'iPhones', value: 3512 },
+            { name: 'Minor', value: 4782 },
+            { name: 'Major', value: 2754 },
         ]
     },
     {
@@ -1408,35 +1407,430 @@ export const siteData: dataProps[] = [
           }
         },
         lineData:[
-            {
-                name: "Jan",
-                uv: 4000,
-                pv: 2400,
-                amt: 2400
-            },
-            {
-                name: "Feb",
-                uv: 3000,
-                pv: 1398,
-                amt: 2210
-            },
-            {
-                name: "Mar",
-                uv: 2500,
-                pv: 1298,
-                amt: 2250
-            },
-            {
-                name: "Apr",
-                uv: 3300,
-                pv: 1798,
-                amt: 2810
-            }
+          {
+            name: "Jan",
+            uv: 2082,
+            amt: 220
+          },
+          {
+            name: "",
+            uv: 2769,
+            amt: 220
+          },
+          {
+            name: "",
+            uv: 3156,
+            amt: 220
+          },
+          {
+            name: "",
+            uv: 3698,
+            amt: 220
+          },
+          {
+            name: "",
+            uv: 4187,
+            amt: 220
+          },
+          {
+            name: "",
+            uv: 4556,
+            amt: 220
+          },
+          {
+            name: "",
+            uv: 4999,
+            amt: 220
+          },
+          {
+            name: "Feb",
+            uv: 2047,
+            amt: 220
+          },
+          {
+            name: "",
+            uv: 2634,
+            amt: 220
+          },
+          {
+            name: "",
+            uv: 3098,
+            amt: 220
+          },
+          {
+            name: "",
+            uv: 3587,
+            amt: 220
+          },
+          {
+            name: "",
+            uv: 2491,
+            amt: 220
+          },
+          {
+            name: "",
+            uv: 3944,
+            amt: 220
+          },
+          {
+            name: "",
+            uv: 4991,
+            amt: 220
+          },
+          {
+            name: "Mar",
+            uv: 2113,
+            amt: 220
+          },
+          {
+            name: "",
+            uv: 2679,
+            amt: 220
+          },
+          {
+            name: "",
+            uv: 3158,
+            amt: 220
+          },
+          {
+            name: "",
+            uv: 3672,
+            amt: 220
+          },
+          {
+            name: "",
+            uv: 1233,
+            amt: 220
+          },
+          {
+            name: "",
+            uv: 344,
+            amt: 220
+          },
+          {
+            name: "",
+            uv: 4996,
+            amt: 220
+          },
+          {
+            name: "Apr",
+            uv: 2085,
+            amt: 220
+          },
+          {
+            name: "",
+            uv: 3567,
+            amt: 220
+          },
+          {
+            name: "",
+            uv: 3116,
+            amt: 220
+          },
+          {
+            name: "",
+            uv: 3678,
+            amt: 220
+          },
+          {
+            name: "",
+            uv: 4111,
+            amt: 220
+          },
+          {
+            name: "",
+            uv: 1906,
+            amt: 220
+          },
+          {
+            name: "",
+            uv: 4980,
+            amt: 220
+          },
+          {
+            name: "May",
+            uv: 2063,
+            amt: 220
+          },
+          {
+            name: "",
+            uv: 2697,
+            amt: 220
+          },
+          {
+            name: "",
+            uv: 3154,
+            amt: 220
+          },
+          {
+            name: "",
+            uv: 3648,
+            amt: 220
+          },
+          {
+            name: "",
+            uv: 4123,
+            amt: 220
+          },
+          {
+            name: "",
+            uv: 4677,
+            amt: 220
+          },
+          {
+            name: "",
+            uv: 4987,
+            amt: 220
+          },
+          {
+            name: "Jun",
+            uv: 2021,
+            amt: 220
+          },
+          {
+            name: "",
+            uv: 2635,
+            amt: 220
+          },
+          {
+            name: "",
+            uv: 3168,
+            amt: 220
+          },
+          {
+            name: "",
+            uv: 3683,
+            amt: 220
+          },
+          {
+            name: "",
+            uv: 4107,
+            amt: 220
+          },
+          {
+            name: "",
+            uv: 4612,
+            amt: 220
+          },
+          {
+            name: "",
+            uv: 4988,
+            amt: 220
+          },
+          {
+            name: "Jul",
+            uv: 2015,
+            amt: 220
+          },
+          {
+            name: "",
+            uv: 2670,
+            amt: 220
+          },
+          {
+            name: "",
+            uv: 3122,
+            amt: 220
+          },
+          {
+            name: "",
+            uv: 3637,
+            amt: 220
+          },
+          {
+            name: "",
+            uv: 4161,
+            amt: 220
+          },
+          {
+            name: "",
+            uv: 4624,
+            amt: 220
+          },
+          {
+            name: "",
+            uv: 4999,
+            amt: 220
+          },
+          {
+            name: "Aug",
+            uv: 2078,
+            amt: 220
+          },
+          {
+            name: "",
+            uv: 2613,
+            amt: 220
+          },
+          {
+            name: "",
+            uv: 3137,
+            amt: 220
+          },
+          {
+            name: "",
+            uv: 3689,
+            amt: 220
+          },
+          {
+            name: "",
+            uv: 4123,
+            amt: 220
+          },
+          {
+            name: "",
+            uv: 4667,
+            amt: 220
+          },
+          {
+            name: "",
+            uv: 4990,
+            amt: 220
+          },
+          {
+            name: "Sep",
+            uv: 2097,
+            amt: 220
+          },
+          {
+            name: "",
+            uv: 2671,
+            amt: 220
+          },
+          {
+            name: "",
+            uv: 3108,
+            amt: 220
+          },
+          {
+            name: "",
+            uv: 3663,
+            amt: 220
+          },
+          {
+            name: "",
+            uv: 4132,
+            amt: 220
+          },
+          {
+            name: "",
+            uv: 4688,
+            amt: 220
+          },
+          {
+            name: "",
+            uv: 4993,
+            amt: 220
+          },
+          {
+            name: "Oct",
+            uv: 2109,
+            amt: 220
+          },
+          {
+            name: "",
+            uv: 2644,
+            amt: 220
+          },
+          {
+            name: "",
+            uv: 3103,
+            amt: 220
+          },
+          {
+            name: "",
+            uv: 3680,
+            amt: 220
+          },
+          {
+            name: "",
+            uv: 4111,
+            amt: 220
+          },
+          {
+            name: "",
+            uv: 4675,
+            amt: 220
+          },
+          {
+            name: "",
+            uv: 4998,
+            amt: 220
+          },
+          {
+            name: "Nov",
+            uv: 2066,
+            amt: 220
+          },
+          {
+            name: "",
+            uv: 226,
+            amt: 220
+          },
+          {
+            name: "",
+            uv: 98,
+            amt: 220
+          },
+          {
+            name: "",
+            uv: 333,
+            amt: 220
+          },
+          {
+            name: "",
+            uv: 33,
+            amt: 220
+          },
+          {
+            name: "",
+            uv: 54,
+            amt: 220
+          },
+          {
+            name: "",
+            uv: 12,
+            amt: 220
+          },
+          {
+            name: "Dec",
+            uv: 543,
+            amt: 220
+          },
+          {
+            name: "",
+            uv: 123,
+            amt: 220
+          },
+          {
+            name: "",
+            uv: 3112,
+            amt: 220
+          },
+          {
+            name: "",
+            uv: 323,
+            amt: 220
+          },
+          {
+            name: "",
+            uv: 1233,
+            amt: 220
+          },
+          {
+            name: "",
+            uv: 5774,
+            amt: 220
+          },
+          {
+            name: "",
+            uv: 4990,
+            amt: 220
+          }
         ],
         pieData: [
-            { name: 'Electronics', value: 14 },
-            { name: 'Laptops', value: 28 },
-            { name: 'iPhones', value: 51 },
+            { name: 'Exchanged', value: 25 },
+            { name: 'Refunded', value: 41 }
         ]
     }
 ]

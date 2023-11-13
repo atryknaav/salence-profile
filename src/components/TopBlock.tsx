@@ -29,7 +29,7 @@ const TopBlock = (props: { name: BlockName, status: string, weekPercent: string,
 
   return (
     
-    <div className={'flex flex-col group flex-1 first:rounded-l-lg last:rounded-r-lg p-3 mt-20 lg:mt-0' + styleBody} 
+    <div className={'flex flex-col group flex-1 first:rounded-l-lg last:rounded-r-lg p-3 mt-15 lg:mt-0 first:mt-[11vw] lg:first:mt-0' + styleBody} 
     
         onClick={() => setCurrBlock(name)}>
 

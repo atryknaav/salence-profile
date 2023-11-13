@@ -12,7 +12,7 @@ const Graph = () => {
   const legends = siteData.find((e) => e.blockName === block)!.lineLegends;
   return (
     <div className='mt-[20px]'>
-    <LineChart className='w-full'
+    <LineChart className='w-screen lg:w-full'
       width={1000}
       height={400}
       data={data}

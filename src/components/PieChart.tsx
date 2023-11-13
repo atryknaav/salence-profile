@@ -8,6 +8,7 @@ const PieChartExp = () => {
   const data = siteData.find((e) => e.blockName === block)!.pieData;
   const colors = ['#eb750e', '#115e59', '#bef264']
   return (
+    <ResponsiveContainer width="100%" height="100%">
     <div><PieChart width={400} height={400} margin={{ top: 5, left: 0, right: 80, bottom: 80 }}>
     <Pie
       dataKey="value"
@@ -32,6 +33,7 @@ const PieChartExp = () => {
     
     <Tooltip />
   </PieChart></div>
+  </ResponsiveContainer>
   )
 }
 
