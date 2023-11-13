@@ -2,6 +2,8 @@
 
 ### This site is made by [the design from Dribbble](https://dribbble.com/shots/22143278-Salence-E-commerce-Analytics-Web-App) as a work of **Arsenii Bilyi**.
 
+### [**GITHUB PAGES VERSION**](https://atryknaav.github.io/salence-profile/)
+
 ## Screenshots
 
 ![1](image.png)
