@@ -35,7 +35,7 @@ const PieChartExp = () => {
             legendType="rect"
             paddingAngle={2}
           >
-            {data.map((entry, index) => (
+            {data.map((_, index) => (
               <Cell
                 key={`cell-${index}`}
                 fill={colors[index % colors.length]}

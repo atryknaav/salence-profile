@@ -6,7 +6,7 @@ import Upgrade from "./components/Upgrade";
 import TopProducts from "./components/TopProducts/TopProducts";
 import Sidebar from "./components/Sidebar/Sidebar";
 import Graph from "./components/Graph";
-import { useAtom, useAtomValue } from "jotai";
+import { useAtomValue } from "jotai";
 import { isDarkMode } from "./contexts/themeContext";
 import { blockAtom } from "./contexts/blockContext";
 
