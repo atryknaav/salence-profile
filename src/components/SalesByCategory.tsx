@@ -14,7 +14,7 @@ const SalesByCategory = () => {
         <PieChartExp/>
         
           <div className="align-bottom">
-            More
+            {'More→'}
           </div>
         </div>
     </div>
