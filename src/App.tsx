@@ -13,10 +13,22 @@ import { useEffect } from "react";
 import PieChartExp from "./components/PieChart";
 import TopProducts from "./components/TopProducts/TopProducts";
 import Upgrade from "./components/Upgrade";
+import SideBarMobile from "./components/Sidebar/SideBarMobile";
+import { sideActive } from "./contexts/SideBarContext";
 
 function App() {
   const isDark = useAtomValue(isDarkMode);
   const block = useAtomValue(blockAtom);
+  const isSide = useAtomValue(sideActive);
+
+  useEffect(() => {
+    // Add or remove 'overflow-hidden' class based on SideBarMobile activation
+    if (isSide && window.innerWidth <= 1024) {
+      document.body.classList.add("overflow-hidden");
+    } else {
+      document.body.classList.remove("overflow-hidden");
+    }
+  }, [isSide]);
 
   useEffect(() => {
     document.body.className = isDark ? 'bg-dark duration-500 lg:p-2 p-0 max-w-[screen]' : 'bg-white duration-500 lg:p-2 p-0 max-w-[screen]';
@@ -57,7 +69,12 @@ function App() {
 
       {/* RIGHT BODY */}
       <div className="flex-grow h-full lg:mx-12 flex flex-col gap-6 w-full ">
+        
+      <SideBarMobile />
+
+
         <Header />
+
 
         {/* UPPER BLOCKS */}
         <div className="flex flex-col items-center lg:flex-row rounded-lg gap-3 lg:gap-0 px-3 lg:px-0">
