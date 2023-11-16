@@ -30,7 +30,7 @@ const TopBlock = (props: {
             ? "text-white border-border border-r-[1px] border-r-border last:border-none"
             : "text-black border-[1px] border-slate-200"
         }`
-      : ` transition-colors hover:bg-success hover:cursor-pointer ${
+      : ` transition-colors lg:hover:bg-success hover:cursor-pointer ${
           isDark
             ? "bg-back-dark text-white border-border border-r-[1px] last:border-none"
             : "bg-white text-black border-[1px] border-slate-200"
@@ -39,7 +39,7 @@ const TopBlock = (props: {
   return (
     <div
       className={
-        "flex flex-col group flex-1 first:rounded-l-lg last:rounded-r-lg p-3 mt-15 lg:mt-0 first:mt-[11vw] lg:first:mt-0 select-none" +
+        "flex flex-col lg:group flex-1 first:rounded-l-lg last:rounded-r-lg p-3 mt-15 lg:mt-0 first:mt-[11vw] lg:first:mt-0 select-none w-full" +
         styleBody
       }
       onClick={() => setCurrBlock(name)}

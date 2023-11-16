@@ -15,12 +15,12 @@ const PieChartExp = () => {
   const data = siteData.find((e) => e.blockName === block)!.pieData;
   const colors = ["#eb750e", "#115e59", "#bef264"];
   return (
-    <ResponsiveContainer width="100%" height="100%">
-      <div>
+    <ResponsiveContainer width="90%" height="100%">
+      <div className="flex lg:justify-end justify-center">
         <PieChart
           width={400}
           height={400}
-          margin={{ top: 5, left: 0, right: 80, bottom: 80 }}
+          margin={{ top: -20, left: 0, right: 70, bottom: 80 }}
         >
           <Pie
             dataKey="value"
@@ -44,9 +44,10 @@ const PieChartExp = () => {
           </Pie>
           <Legend
             iconType="circle"
-            height={50}
+            height={1}
             layout="vertical"
             align="left"
+            wrapperStyle={{left: 60}}
           />
 
           <Tooltip />

@@ -6,3 +6,15 @@
 .center {
   @apply flex justify-center items-center;
 }
+
+html {
+  height: 100%;
+}
+body {
+  height: 100%;
+}
+
+#root {
+  height: 100%;
+  scale: 1;
+}

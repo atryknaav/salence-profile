@@ -1,18 +1,26 @@
 import Header from "./components/Header";
 import TopBlock from "./components/TopBlock";
 import { TopBlockDataType } from "./types/TopBlockData";
-import SalesByCategory from "./components/SalesByCategory";
-import Upgrade from "./components/Upgrade";
-import TopProducts from "./components/TopProducts/TopProducts";
+// import SalesByCategory from "./components/SalesByCategory";
+// import Upgrade from "./components/Upgrade";
+// import TopProducts from "./components/TopProducts/TopProducts";
 import Sidebar from "./components/Sidebar/Sidebar";
 import Graph from "./components/Graph";
 import { useAtomValue } from "jotai";
 import { isDarkMode } from "./contexts/themeContext";
 import { blockAtom } from "./contexts/blockContext";
+import { useEffect } from "react";
+import PieChartExp from "./components/PieChart";
+import TopProducts from "./components/TopProducts/TopProducts";
+import Upgrade from "./components/Upgrade";
 
 function App() {
   const isDark = useAtomValue(isDarkMode);
   const block = useAtomValue(blockAtom);
+
+  useEffect(() => {
+    document.body.className = isDark ? 'bg-dark duration-500 lg:p-2 p-0 max-w-[screen]' : 'bg-white duration-500 lg:p-2 p-0 max-w-[screen]';
+  }, [isDark])
 
   const topBlockData: TopBlockDataType[] = [
     {
@@ -42,17 +50,17 @@ function App() {
   ];
 
   return (
-    <div className="flex w-full h-[100%]">
+    <div className="flex w-full h-full">
 
       {/* SIDEBAR */}
       <Sidebar />
 
       {/* RIGHT BODY */}
-      <div className="flex-1 h-full lg:ml-12 flex flex-col gap-6">
+      <div className="flex-1 h-full lg:mx-12 flex flex-col gap-6 w-full ">
         <Header />
 
         {/* UPPER BLOCKS */}
-        <div className="flex flex-col items-center lg:flex-row rounded-lg ">
+        <div className="flex flex-col items-center lg:flex-row rounded-lg gap-3 lg:gap-0 px-3 lg:px-0">
           {topBlockData.map((data, index) => (
             <TopBlock
               key={index}
@@ -65,38 +73,37 @@ function App() {
         </div>
 
         {/* CHARTS PART */}
-        <div className="flex flex-row flex-1 gap-6 w-full">
-          <div className="flex flex-col w-full gap-6">
 
-            {/* LINEAR PART */}
-            <div
-              className={`w-screen flex flex-col bg-back-dark rounded-lg lg:w-full h-[70%] ${
-                isDark ? "bg-back-dark" : "bg-white"
-              }`}
-            >
-              <div
-                className={`mt-5 mb-[-5%] ml-5 text-lg font-bold ${
-                  isDark ? "text-white" : "text-black"
-                }`}
-              >
+        <div className="flex flex-col lg:flex-row gap-6 lg:justify-between w-full px-3 lg:px-0">
+          <div className={`px-2 rounded-lg flex-grow  ${isDark
+            ? 'bg-back-dark'
+            : 'bg-white'}`}>
+              <div className={`text-lg mt-2 mb-[-3rem] ml-2 font-semibold ${isDark ? 'text-white' : 'text-black'}`}>
                 {block}
               </div>
-              <Graph />
-            </div>
-
-          {/* BOTTOM */}
-            <div className="flex-1 rounded-lg">
-              <TopProducts />
-            </div>
+            <Graph />
           </div>
-          
-          {/* PIECHART */}
-          <div className="flex flex-col w-[35%] gap-6">
-            <SalesByCategory />
 
+          <div className={`px-6 rounded-lg h-[fit-content] lg:h-full  ${isDark
+            ? 'bg-back-dark'
+            : 'bg-white'}`}>
+              <div>
+                
+              </div>
+            <PieChartExp />
+          </div>
+        </div>
+
+        <div className="flex justify-between gap-6 h-full w-full lg:flex-row flex-col p-3">
+          <div className="flex lg:w-[67%]">
+            <TopProducts />
+          </div>
+
+          <div className="flex flex-grow">
             <Upgrade />
           </div>
         </div>
+        
       </div>
     </div>
   );

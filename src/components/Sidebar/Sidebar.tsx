@@ -24,13 +24,17 @@ const Sidebar = () => {
         {logo} {`salence`}
       </div>
 
-      <div className="flex flex-col w-full flex-1 border-y-[1px] border-border rounded-r-3xl -mt-[1px] gap-3">
+      <div className="flex flex-col w-full flex-grow border-y-[1px] border-border rounded-r-3xl -mt-[1px] gap-3 align-top">
         {options.map((item, index) => (
           <Option key={index} name={item} />
         ))}
+        <div className="h-"></div>
       </div>
 
-      <div className="w-full h-[fit-content] -mt-[1px]  border-t-[1px] border-border rounded-tr-3xl dark:text-white flex flex-col gap-2">
+      <div className="w-full h-[fit-content] -mt-[1px]  border-t-[1px] border-border rounded-tr-3xl dark:text-white flex flex-col gap-2 align-bottom">
+        <div className="h-full">
+
+        </div>
         <p
           className={`mt-5 p-2 duration-100 mr-4 rounded-xl text-lg hover:cursor-pointer select-none ${
             isDark

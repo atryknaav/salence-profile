@@ -1,6 +1,6 @@
 const Upgrade = () => {
   return (
-    <div className="flex flex-col bg-upgrade flex-1 px-3 rounded-lg justify-center items-center gap-6">
+    <div className="flex flex-col bg-upgrade flex-1 p-3 rounded-lg justify-center items-center gap-6">
       <div className="font-semibold text-xl text-white flex justify-start items-start w-full">
         Release your maximal
         <br /> potential software

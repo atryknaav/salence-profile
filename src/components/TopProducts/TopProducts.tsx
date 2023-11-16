@@ -1,5 +1,5 @@
 import Select from "./Select";
-import { search } from "../../svg/icons";
+// import { search } from "../../svg/icons";
 import { useAtomValue } from "jotai";
 import { isDarkMode } from "../../contexts/themeContext";
 import { useState } from "react";
@@ -13,7 +13,7 @@ const TopProducts = () => {
         isDark ? "bg-back-dark" : "bg-white"
       }`}
     >
-      <div className="flex justify-between mb-2">
+      <div className="flex justify-between mb-2 text-[0.9rem]">
         <div
           className={`font-semibold rounded-lg ${
             isDark ? "text-white" : "text-black"
@@ -24,14 +24,9 @@ const TopProducts = () => {
 
         <div className="flex justify-end gap-6 flex-1">
           <div className="relative">
-            <div className="w-5 h-5 absolute top-1/2 -translate-y-3 left-2 text-minor-dark">
-              {cont === "" ? search : ""}
-            </div>
             <input
               type="text"
-              className={`bg-transparent rounded-md border-minor-dark border-[1px] w-[25vw] py-1 ${
-                cont === "" ? "pl-8" : "pl-2"
-              } ${isDark ? "text-white" : "text-black"}`}
+              className={`bg-transparent rounded-md border-minor-dark border-[1px] w-[25vw] pl-2 py-[0.4rem] ${isDark ? "text-white" : "text-black"}`}
               placeholder="Search"
               value={cont}
               onChange={(e) => setCont(e.target.value)}
@@ -64,7 +59,7 @@ const TopProducts = () => {
                 Sales
               </th>
             </tr>
-            <tr>
+            <tr className="lg:text-[1.2rem] text-[0.80rem]">
               <td
                 className={`${
                   isDark ? "text-white" : "text-black"

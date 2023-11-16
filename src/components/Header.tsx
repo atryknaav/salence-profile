@@ -8,14 +8,14 @@ const Header = () => {
   const isDark = useAtomValue(isDarkMode);
   const setIsDark = useSetAtom(isDarkMode);
   return (
-    <header className="flex flex-row justify-between p-3 lg:bg-transparent bg-black fixed w-screen lg:w-full lg:static h-[fit-content] mb-20 lg:mb-0 z-0">
+    <header className="flex flex-row justify-between p-3 lg:bg-transparent bg-black fixed w-screen lg:w-full lg:static h-[fit-content]  lg:mb-0 z-0">
       <div className="w-[70%]">
         <h1
           className={`lg:text-3xl font-medium font-sans w-full text-[6vw] ${
             isDark ? "text-white" : "text-black"
           }`}
         >
-          Welcome back, Arsenii
+          Welcome back, User
         </h1>
         <p className="text-minor-light dark:text-minor-dark text-lg lg:block hidden">
           Here's what's happening with your store today.
@@ -57,7 +57,7 @@ const Header = () => {
                 : "text-black hover:bg-slate-100"
             }`}
           >
-            Arsenii Bilyi <div className="center">{chevronDown}</div>
+            User Userson <div className="center">{chevronDown}</div>
           </div>
         </div>
       </div>
