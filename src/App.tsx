@@ -56,7 +56,7 @@ function App() {
       <Sidebar />
 
       {/* RIGHT BODY */}
-      <div className="flex-1 h-full lg:mx-12 flex flex-col gap-6 w-full ">
+      <div className="flex-grow h-full lg:mx-12 flex flex-col gap-6 w-full ">
         <Header />
 
         {/* UPPER BLOCKS */}
@@ -94,7 +94,7 @@ function App() {
           </div>
         </div>
 
-        <div className="flex justify-between gap-6 h-full w-full lg:flex-row flex-col p-3">
+        <div className="flex justify-between gap-6 h-full w-full lg:flex-row flex-col pb-3">
           <div className="flex lg:w-[67%]">
             <TopProducts />
           </div>

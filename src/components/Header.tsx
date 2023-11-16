@@ -3,15 +3,19 @@ import { RiNotification3Line } from "react-icons/ri";
 import { chevronDown, moon, sun } from "../svg/icons";
 import { isDarkMode } from "../contexts/themeContext";
 import { useAtomValue, useSetAtom } from "jotai";
+import SideBarMobile from "./Sidebar/SideBarMobile";
+import { useState } from "react";
 
 const Header = () => {
+  const [isActive, setIsActive] = useState<boolean>(false);
   const isDark = useAtomValue(isDarkMode);
   const setIsDark = useSetAtom(isDarkMode);
   return (
-    <header className="flex flex-row justify-between p-3 lg:bg-transparent bg-black fixed w-screen lg:w-full lg:static h-[fit-content]  lg:mb-0 z-0">
+    <div className="flex flex-col sticky top-0 h-screen">
+    <header className="flex flex-row justify-between p-3 lg:bg-transparent bg-active-dark w-screen lg:w-full lg:static flex-1 mb-[-3rem] lg:mb-0 z-10">
       <div className="w-[70%]">
         <h1
-          className={`lg:text-3xl font-medium font-sans w-full text-[6vw] ${
+          className={`lg:text-3xl font-medium font-sans w-full text-[24px] ${
             isDark ? "text-white" : "text-black"
           }`}
         >
@@ -62,10 +66,12 @@ const Header = () => {
         </div>
       </div>
 
-      <div className="dark:text-white flex-col justify-center text-3xl lg:hidden flex">
+      <div className="dark:text-white flex-col justify-center text-3xl lg:hidden flex" onClick={() => setIsActive(!isActive)}>
         <AiOutlineUnorderedList />
       </div>
     </header>
+      <SideBarMobile active={isActive}/>
+    </div>
   );
 };
 
