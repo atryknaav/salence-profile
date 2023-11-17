@@ -23,7 +23,4 @@
 - Dark/Light theme change on button click (the theme is defaultly set to the system's preferable one)
 - SVG Work
 - Using data from a data base
-
-## In Process
-
-Currently, there is multiplatform capability being developed
+- Multiplatrformity

@@ -13,7 +13,6 @@ import { useEffect } from "react";
 import PieChartExp from "./components/PieChart";
 import TopProducts from "./components/TopProducts/TopProducts";
 import Upgrade from "./components/Upgrade";
-import SideBarMobile from "./components/Sidebar/SideBarMobile";
 import { sideActive } from "./contexts/SideBarContext";
 
 function App() {
@@ -22,7 +21,7 @@ function App() {
   const isSide = useAtomValue(sideActive);
 
   useEffect(() => {
-    // Add or remove 'overflow-hidden' class based on SideBarMobile activation
+    
     if (isSide && window.innerWidth <= 1024) {
       document.body.classList.add("overflow-hidden");
     } else {
@@ -70,7 +69,6 @@ function App() {
       {/* RIGHT BODY */}
       <div className="flex-grow h-full lg:mx-12 flex flex-col gap-6 w-full ">
         
-      <SideBarMobile />
 
 
         <Header />
