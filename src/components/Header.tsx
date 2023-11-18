@@ -12,7 +12,7 @@ const Header = () => {
 
   const isDark = useAtomValue(isDarkMode);
   return (
-    <div className="flex flex-col sticky top-0 mt-[-0.1rem] z-10 ">
+    <div className="flex flex-col lg:static sticky top-0 mt-[-0.1rem] z-10 ">
     <header className={`flex flex-row justify-between p-3 lg:bg-transparent w-screen lg:w-full lg:static flex-1 lg:mb-0 mb-[-3.5rem] z-10 ${isDark
       ? 'bg-active-dark'
       : 'bg-[#e7e7e7]'}`}>
